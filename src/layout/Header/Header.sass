@@ -3,11 +3,25 @@
 .header
     width: 100%
     min-height: 80px
-    background-color: #B44420
     display: flex
     align-items: center
     position: fixed
-    z-index: 1
+    z-index: 10
+    transition: 0.4s
+
+.header__mask
+    z-index: -1
+    content: ""
+    position: absolute
+    height: 100%
+    width: 100%
+    right: 0px
+    opacity: 1
+    transition: all 0.3s ease 0s
+    background: #B44420
+
+.header__mask_status_hidden
+    width: 0%
 
 .header__content
     width: 100%

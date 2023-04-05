@@ -6,8 +6,55 @@
 
 .navmenu__list
     display: flex
-    gap: 40px
+    gap: 20px
     @include web-nav
-    
+    padding-right: 26px
+    border-right: 1px solid rgba(35, 35, 35, 0.6)
 
+.navmenu__item
+    padding: 10px
+    transition: all 0.3s ease 0s
+    position: relative
 
+.navmenu__item:before
+    z-index: -1
+    content: ""
+    position: absolute
+    height: 0%
+    width: 100%
+    bottom: -1px
+    left: 0px
+    opacity: 1
+    transition: all 0.3s ease 0s
+    background: linear-gradient(90deg, #B44420, rgb(79, 41, 32))
+
+.navmenu__item:hover:before
+    height: 100%
+
+.navmenu__item:hover
+    color: white
+
+.navmenu__blog
+    @include web-nav
+    margin-left: 25px
+    padding: 10px
+    transition: all 0.3s ease 0s
+    position: relative
+
+.navmenu__blog:before
+    z-index: -1
+    content: ""
+    position: absolute
+    height: 0%
+    width: 100%
+    bottom: -1px
+    left: 0px
+    opacity: 1
+    transition: all 0.3s ease 0s
+    background: linear-gradient(90deg, #B44420, rgb(79, 41, 32))
+
+.navmenu__blog:hover:before
+    height: 100%
+
+.navmenu__blog:hover
+    color: white
