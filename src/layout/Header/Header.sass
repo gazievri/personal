@@ -1,0 +1,21 @@
+@import "../../styles/@mixins"
+
+.header
+    width: 100%
+    min-height: 80px
+    background-color: #B44420
+    display: flex
+    align-items: center
+    position: fixed
+    z-index: 1
+
+.header__content
+    width: 100%
+    max-width: 1110px
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+
+.header__logo
+    @include logo
+
