@@ -11,6 +11,12 @@ import hedgtasker_5 from '../assets/images/projects/hedgtasker/hedg-tasker-5.web
 
 import motoemotion_1 from '../assets/images/projects/motoemotion/motoemotion-1.webp';
 
+import diaconia_1 from '../assets/images/projects/diaconia/diaconia-1.webp'
+
+import sunny_1 from '../assets/images/projects/sunny/sunny-1.webp'
+
+import osobtip_1 from '../assets/images/projects/osobtip/osobtip-1.webp'
+
 export const PROJECTS = [
   {
     title: 'Experimental Dating',
@@ -36,6 +42,27 @@ export const PROJECTS = [
     title: 'Motoemotion',
     images: [motoemotion_1],
     url: 'https://motoemotion.ru/',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
+  {
+    title: 'Diaconia',
+    images: [diaconia_1],
+    url: 'https://promo.diaconiafond.ru/',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
+  {
+    title: 'Sunny Circle',
+    images: [sunny_1],
+    url: 'http://grinrus.beget.tech/',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  },
+  {
+    title: 'Special Type',
+    images: [osobtip_1],
+    url: 'https://osobtip.ru/',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
   },
