@@ -7,7 +7,7 @@ export const Navmenu = () => {
     <nav className="navmenu">
       <ul className="navmenu__list">
         <li className="navmenu__item">
-          <HashLink to="">About</HashLink>
+          <HashLink to="#about">About</HashLink>
         </li>
         <li className="navmenu__item">
           <HashLink to="">Experience</HashLink>
