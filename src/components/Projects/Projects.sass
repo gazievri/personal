@@ -1,0 +1,59 @@
+@import "../../styles/@mixins"
+
+.projects
+    width: 100%
+    display: flex
+
+.projects__content
+    max-width: 1110px
+    width: 100%
+    margin: 100px auto 0
+
+.projects__title
+    color: #B44420
+    @include logo
+
+.projects__filters
+    display: flex
+    max-width: 920px
+    justify-content: space-between
+    margin: 30px auto
+
+.project__filter
+
+.project__filter-btn
+    @include web-btn
+    padding: 10px
+    min-width: 103px
+    transition: all 0.3s ease 0s
+    position: relative
+    background: none
+
+.project__filter-btn:before
+    content: ''
+    z-index: -1
+    position: absolute
+    height: 0%
+    width: 100%
+    bottom: -1px
+    left: 0px
+    opacity: 1
+    transition: all 0.3s ease 0s
+    background: linear-gradient(90deg, #B44420, rgb(79, 41, 32))
+
+.project__filter-btn_type_active
+    color: white
+
+.project__filter-btn_type_active:before
+    height: 100%
+
+.projects__list
+    display: grid
+    grid-template-rows: repeat(3, 300px)
+    grid-template-columns: repeat(3, 1fr)
+    gap: 1px
+
+
+
+
+

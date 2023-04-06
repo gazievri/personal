@@ -1,5 +1,6 @@
 import './Experience.sass';
 import { technologies } from '../../data/experienceData';
+import { v4 as uuidv4 } from "uuid";
 
 export const Experience = () => {
   return (
@@ -13,6 +14,7 @@ export const Experience = () => {
               src={el.icon}
               alt={el.title}
               title={el.title}
+              key={uuidv4()}
             />
           ))}
         </div>

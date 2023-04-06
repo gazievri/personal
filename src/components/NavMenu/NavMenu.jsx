@@ -13,7 +13,7 @@ export const Navmenu = () => {
           <HashLink to="#experience">Experience</HashLink>
         </li>
         <li className="navmenu__item">
-          <HashLink to="">Projects</HashLink>
+          <HashLink to="#projects">Projects</HashLink>
         </li>
         <li className="navmenu__item">
           <a href="https://www.behance.net/ariannanas" target='_blank'>Disigner</a>
