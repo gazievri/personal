@@ -10,7 +10,7 @@ export const Navmenu = () => {
           <HashLink to="#about">About</HashLink>
         </li>
         <li className="navmenu__item">
-          <HashLink to="">Experience</HashLink>
+          <HashLink to="#experience">Experience</HashLink>
         </li>
         <li className="navmenu__item">
           <HashLink to="">Projects</HashLink>
