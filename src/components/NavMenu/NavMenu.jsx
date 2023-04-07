@@ -19,10 +19,10 @@ export const Navmenu = () => {
           <a href="https://www.behance.net/ariannanas" target='_blank'>Disigner</a>
         </li>
         <li className="navmenu__item">
-          <HashLink to="#contact">Contact</HashLink>
+          <NavLink to='contact'>Contact</NavLink>
         </li>
       </ul>
-      <NavLink className="navmenu__blog">Blog</NavLink>
+      <NavLink to='blog' className="navmenu__blog">Blog</NavLink>
     </nav>
   );
 };

@@ -24,7 +24,7 @@
     opacity: 0
 
 .project__title
-    @include web-nav
+    @include web-h4
     margin-bottom: 30px
 
 .project__bottom-mask
@@ -49,6 +49,25 @@
     max-height: 55px
     height: 100%
     margin-top: 30px
+    position: relative
+
+.project__btn:before
+    z-index: -1
+    content: ""
+    position: absolute
+    height: 0%
+    width: 100%
+    bottom: 0px
+    left: 0px
+    opacity: 1
+    transition: all 0.3s ease 0s
+    background: linear-gradient(90deg, #B44420, rgb(79, 41, 32))
+
+.project__btn:hover:before
+    height: 100%
+
+.project__btn:hover
+    color: white
 
 .project:hover .project__top-mask
     height: 50%

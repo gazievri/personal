@@ -1,0 +1,103 @@
+@import "../../styles/@mixins"
+
+.footer
+    width: 100%
+    display: flex
+    border-width: 0 0 11px 0
+    border-style: solid
+    border-image: linear-gradient(to right, #B44420, #202020) 1
+
+.footer__content
+    margin: 100px auto 0
+    max-width: 1110px
+    width: 100%
+    min-height: 100px
+    display: flex
+    flex-direction: column
+
+.footer__info
+    display: flex
+    justify-content: space-between
+
+.footer__text
+    max-width: 637px
+
+.footer__title
+    @include logo
+    line-height: 62px
+
+.footer__subtitle
+    @include logo
+    line-height: 62px
+
+.footer__btn
+    width: 255px
+    height: 55px
+    border: 1px solid #232323
+    @include web-h4
+    margin-top: 15px
+    position: relative
+    transition: all 0.3s ease 0s
+
+.footer__btn:before
+    z-index: -1
+    content: ""
+    position: absolute
+    height: 0%
+    width: 100%
+    bottom: 0px
+    left: 0px
+    opacity: 1
+    transition: all 0.3s ease 0s
+    background: linear-gradient(90deg, #B44420, rgb(79, 41, 32))
+
+.footer__btn:hover:before
+    height: 100%
+
+.footer__btn:hover
+    color: white
+
+.footer__links
+    display: flex
+    flex-direction: column
+    gap: 15px
+
+.footer__link
+    width: fit-content
+    @include web-nav
+    position: relative
+    transition: all 0.3s ease 0s
+    padding: 5px
+    line-height: 22px
+
+.footer__link::after
+    content: "+"
+    position: absolute
+    color: #B44420
+    top: 4px
+    left: -13px
+    z-index: 5
+    transform: rotate(90deg)
+
+.footer__link:before
+    z-index: -1
+    content: ""
+    position: absolute
+    height: 0%
+    width: 100%
+    bottom: 1px
+    left: 0px
+    opacity: 1
+    transition: all 0.3s ease 0s
+    background: linear-gradient(90deg, #B44420, rgb(79, 41, 32))
+
+.footer__link:hover:before
+    height: 100%
+
+.footer__link:hover
+    color: white
+
+.footer__copyright
+    @include web-t16
+    align-self: center
+    margin: 45px 0 15px

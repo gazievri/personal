@@ -23,4 +23,22 @@
     border: 1px solid #B44420
     width: 255px
     height: 55px
+    position: relative
     
+.post__btn:before
+    z-index: -1
+    content: ""
+    position: absolute
+    height: 0%
+    width: 100%
+    bottom: 0px
+    left: 0px
+    opacity: 1
+    transition: all 0.3s ease 0s
+    background: linear-gradient(90deg, #B44420, rgb(79, 41, 32))
+
+.post__btn:hover:before
+    height: 100%
+
+.post__btn:hover
+    color: white

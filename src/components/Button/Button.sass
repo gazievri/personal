@@ -5,4 +5,23 @@
     height: 55px
     border: 1px solid #232323
     @include web-btn
+    position: relative
+    z-index: 1
+    
+.button:before
+    z-index: -1
+    content: ""
+    position: absolute
+    height: 0%
+    width: 100%
+    bottom: 0px
+    left: 0px
+    opacity: 1
+    transition: all 0.3s ease 0s
+    background: linear-gradient(90deg, #B44420, rgb(79, 41, 32))
 
+.button:hover:before
+    height: 100%
+
+.button:hover
+    color: white
