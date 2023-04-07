@@ -26,7 +26,7 @@ export const Header = () => {
   }
 
   return (
-    <header className="header">
+    <header className={`header ${isWhite ? 'header__with-shadow' : ''}`}>
       <div
         className={`header__mask ${
           isWhite ? 'header__mask_status_hidden' : ''
