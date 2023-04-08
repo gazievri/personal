@@ -3,10 +3,11 @@ import { Header } from './layout/Header/Header';
 import { Main } from './layout/Main/Main';
 import { Footer } from './layout/Footer/Footer';
 import { ToTop } from './components/ToTop/ToTop';
+import { useState } from 'react';
 
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Header />
       <Main />
       <Footer />

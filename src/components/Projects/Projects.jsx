@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Section } from '../Section/Section';
 import { Project } from '../Project/Project';
 import { PROJECTS } from '../../data/projectsData';
+import { Modal } from '../Modal/Modal';
 
 const FILTERS_TITLE = [
   {
@@ -33,8 +34,10 @@ const OPTIONS = {
   title: 'PROJECTS',
 };
 
-export const Projects = () => {
+export const Projects = ({ setModalIsOpened, modalIsOpened }) => {
   const [activeFilter, setActiveFilter] = useState(1);
+
+  const [data, setData] = useState({});
 
   const handleFilterClick = (id) => {
     setActiveFilter(id);
@@ -60,10 +63,21 @@ export const Projects = () => {
       <ul className="projects__list">
         {PROJECTS.map((el) => (
           <li className="project__list-item" key={uuidv4()}>
-            <Project project={el} />
+            <Project
+              project={el}
+              setModalIsOpened={setModalIsOpened}
+              setData={setData}
+            />
           </li>
         ))}
       </ul>
+      {data.title && (
+        <Modal
+          modalIsOpened={modalIsOpened}
+          setModalIsOpened={setModalIsOpened}
+          data={data}
+        />
+      )}
     </Section>
   );
 };

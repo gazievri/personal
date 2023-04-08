@@ -6,7 +6,13 @@ export const About = () => {
       <div className="about__content">
         <div className="about__title-block">
           <h2 className="about__title">ABOUT</h2>
-          <a className="about__link" href='https://drive.google.com/file/d/1TNEEODdToNKlyBFkGcO3_RxbV19-NY3L/view?usp=share_link' target="_blank">CV</a>
+          <a
+            className="about__link"
+            href="https://drive.google.com/file/d/1TNEEODdToNKlyBFkGcO3_RxbV19-NY3L/view?usp=share_link"
+            target="_blank"
+          >
+            CV
+          </a>
           <a
             className="about__link"
             href="https://github.com/gazievri"
