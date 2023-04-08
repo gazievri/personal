@@ -1,6 +1,9 @@
+import { Button } from '../../components/Button/Button';
 import './Footer.sass';
+import { NavLink } from 'react-router-dom';
 
 export const Footer = () => {
+
   return (
     <footer className="footer">
       <div className="footer__content">
@@ -8,7 +11,7 @@ export const Footer = () => {
           <div className="footer__text">
             <h3 className="footer__title">NEED A WEB DEVELOPER?</h3>
             <p className="footer__subtitle">LET’S BUILD SOMETHING AWESOME.</p>
-            <button className='footer__btn'>Get in touch</button>
+            <Button title='Get in touch' />
           </div>
           <ul className='footer__links'>
             <li className='footer__link'>

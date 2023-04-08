@@ -1,5 +1,6 @@
+import { NavLink } from 'react-router-dom';
 import './Button.sass';
 
-export const Button = ({ title, action }) => {
-  return <button className="button" onClick={action}>{title}</button>;
+export const Button = ({ title }) => {
+  return <NavLink className="button" to='/contact'>{title}</NavLink>;
 };

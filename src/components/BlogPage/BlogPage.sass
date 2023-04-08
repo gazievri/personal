@@ -1,0 +1,38 @@
+@import "../../styles/@mixins"
+
+.blog-page
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: 50px
+
+.blog-page__cover
+    width: 100%
+    background: linear-gradient(91.54deg, #B44420 0.96%, #181818 102.9%)
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    gap: 10px
+    padding-top: 80px
+    height: 50vh
+
+.blog-page__content
+    max-width: 1110px
+    width: 100%
+    margin: 0 auto 0
+
+.blog-page__title
+    color: white
+    @include hero
+    font-size: 100px
+
+.blog-page__posts
+    padding: 50px 0
+    border-width: 0 0 3px 0
+    border-style: solid
+    border-image: linear-gradient(to right, #B44420, #202020) 1
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    gap: 50px

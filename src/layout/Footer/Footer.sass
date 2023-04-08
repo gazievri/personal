@@ -29,33 +29,8 @@
 .footer__subtitle
     @include logo
     line-height: 62px
+    margin-bottom: 20px
 
-.footer__btn
-    width: 255px
-    height: 55px
-    border: 1px solid #232323
-    @include web-h4
-    margin-top: 15px
-    position: relative
-    transition: all 0.3s ease 0s
-
-.footer__btn:before
-    z-index: -1
-    content: ""
-    position: absolute
-    height: 0%
-    width: 100%
-    bottom: 0px
-    left: 0px
-    opacity: 1
-    transition: all 0.3s ease 0s
-    background: linear-gradient(90deg, #B44420, rgb(79, 41, 32))
-
-.footer__btn:hover:before
-    height: 100%
-
-.footer__btn:hover
-    color: white
 
 .footer__links
     display: flex
