@@ -15,16 +15,16 @@ export const Footer = () => {
           </div>
           <ul className='footer__links'>
             <li className='footer__link'>
-              <a href="">EMAIL</a>
+              <a href="mailto:ruslan@gaziev.site" target="_blank">EMAIL</a>
             </li>
             <li className='footer__link'>
               <a href="https://github.com/gazievri" target='_blank'>GITHUB</a>
             </li>
             <li className='footer__link'>
-              <a href="">LINKEDIN</a>
+              <a href="https://www.linkedin.com/in/gazievr/" target="_blank">LINKEDIN</a>
             </li>
             <li className='footer__link'>
-              <a href="">CV</a>
+              <a href="https://drive.google.com/file/d/1TNEEODdToNKlyBFkGcO3_RxbV19-NY3L/view?usp=share_link" target='_blank'>CV</a>
             </li>
             <li className='footer__link'>
               <a href="https://www.behance.net/ariannanas" target='_blank'>DESIGNER</a>
