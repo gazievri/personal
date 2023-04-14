@@ -4,6 +4,13 @@
     display: flex
     align-items: center
 
+.navmenu_status_in-burger
+    width: 100%
+    padding: 60px
+    flex-direction: column
+    align-items: flex-start
+    overflow: hidden
+
 .navmenu__list
     display: flex
     gap: 20px
@@ -11,10 +18,19 @@
     padding-right: 26px
     border-right: 1px solid rgba(35, 35, 35, 0.6)
 
+.navmenu__list_status_in-burger
+    flex-direction: column
+    padding: 0
+    border-right: 0
+    gap: 30px
+
 .navmenu__item
     padding: 10px
     transition: all 0.3s ease 0s
     position: relative
+
+.navmenu__item_status_in-burger
+    padding: 0
 
 .navmenu__item:before
     z-index: -1
@@ -40,6 +56,14 @@
     padding: 10px
     transition: all 0.3s ease 0s
     position: relative
+
+.navmenu__blog_status_in-burger
+    width: 100%
+    margin: 29px 0 0
+    padding: 28px 0 0
+    border-width: 3px 0 0
+    border-style: solid
+    border-image: linear-gradient(to right, #B44420, #202020) 1
 
 .navmenu__blog:before
     z-index: -1

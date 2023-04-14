@@ -20,6 +20,24 @@
 .header__logo
     @include logo
 
+.header__burger
+    width: 50px
+    align-self: center
+    transition: 0.3s
+    display: flex
+    flex-direction: column
+    gap: 10px
+    position: relative
+
+.header__burger:hover
+    opacity: 0.6
+
+.header__burger-line
+    transition: all 0.2s ease 0s
+    height: 4px
+    width: 100%
+    background: rgb(33, 37, 41)
+
 @media screen and (max-width: 1240px)
     .header__content
         padding: 0 60px
