@@ -45,21 +45,26 @@ export const Projects = ({ setModalIsOpened, modalIsOpened }) => {
 
   return (
     <Section options={OPTIONS}>
-      <ul className="projects__filters">
-        {FILTERS_TITLE.map((el) => (
-          <li className="project__filter" key={uuidv4()}>
-            <button
-              className={`project__filter-btn ${
-                activeFilter === el.id ? 'project__filter-btn_type_active' : ''
-              }`}
-              type="button"
-              onClick={() => handleFilterClick(el.id)}
-            >
-              {el.filter}
-            </button>
-          </li>
-        ))}
-      </ul>
+      <div className='projects__filters-container'>
+        <ul className="projects__filters">
+          {FILTERS_TITLE.map((el) => (
+            <li className="project__filter" key={uuidv4()}>
+              <button
+                className={`project__filter-btn ${
+                  activeFilter === el.id
+                    ? 'project__filter-btn_type_active'
+                    : ''
+                }`}
+                type="button"
+                onClick={() => handleFilterClick(el.id)}
+              >
+                {el.filter}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+
       <ul className="projects__list">
         {PROJECTS.map((el) => (
           <li className="project__list-item" key={uuidv4()}>
