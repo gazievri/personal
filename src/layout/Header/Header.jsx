@@ -25,15 +25,15 @@ export const Header = () => {
             <Navmenu />
           ) : (
             <button className="header__burger" onClick={handleBurgerClick}>
-              <div className="header__burger-line"></div>
-              <div className="header__burger-line"></div>
-              <div className="header__burger-line"></div>
+              <div className={`header__burger-line ${isBurgerOpen ? 'header__burger-line-first_status_opened' : ''}`}></div>
+              <div className={`header__burger-line ${isBurgerOpen ? 'header__burger-line-second_status_opened' : ''}`}></div>
+              <div className={`header__burger-line ${isBurgerOpen ? 'header__burger-line-third_status_opened' : ''}`}></div>
             </button>
           )}
         </div>
       </header>
       {
-        isTablet ? <BurgerMenu isBurgerOpen={isBurgerOpen} /> : ''
+        isTablet ? <BurgerMenu isBurgerOpen={isBurgerOpen} setIsBurgerOpen={setIsBurgerOpen} /> : ''
       }
     </>
   );
