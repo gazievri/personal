@@ -1,0 +1,46 @@
+@import "../../styles/@mixins"
+    
+.single-post
+    display: flex
+    flex-direction: column
+
+
+.single-post__cover
+    margin-top: 80px
+    width: 100%
+    min-height: 450px
+    background: #D9D9D9
+
+.single-post__content
+    max-width: 1110px
+    width: 100%
+    margin: 0 auto 0
+
+.single-post__title
+    margin-top: 54px
+    @include logo
+    margin-bottom: 15px
+
+.single-post__subtitle
+    @include web-t16
+    margin-bottom: 40px
+
+.single-post__paragraphs
+    display: flex
+    flex-direction: column
+    gap: 20px
+    border-width: 3px 0 3px 0
+    border-style: solid
+    border-image: linear-gradient(to right, #B44420, #202020) 1
+    padding: 40px 0
+
+.single-post__paragraph
+    @include web-nav
+
+@media screen and (max-width: 1240px)
+    .single-post__content
+        padding: 0 60px
+
+@media screen and (max-width: 800px)
+    .single-post__content
+        padding: 0 15px

@@ -1,15 +1,21 @@
 import './Post.sass';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setPostData } from '../../store/postSlice';
 
 const options = { year: 'numeric', month: 'long', day: 'numeric' };
 
 export const Post = ({ post }) => {
-  const { date, title, text } = post;
+  const { date, title, text, slug } = post;
   const dateObj = new Date(date);
   const dateTimeFormat = new Intl.DateTimeFormat('en-US', options);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleBtnClick = () => {
-    alert('Button is pressed')
-  }
+    dispatch(setPostData(post));
+    navigate(`/${slug}`);
+  };
 
   return (
     <div className="post">
