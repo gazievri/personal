@@ -45,7 +45,7 @@ export const Projects = ({ setModalIsOpened, modalIsOpened }) => {
 
   return (
     <Section options={OPTIONS}>
-      <div className='projects__filters-container'>
+      <div className="projects__filters-container">
         <ul className="projects__filters">
           {FILTERS_TITLE.map((el) => (
             <li className="project__filter" key={uuidv4()}>

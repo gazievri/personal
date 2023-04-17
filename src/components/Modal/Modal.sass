@@ -19,8 +19,8 @@
     display: flex
 
 .modal__popup
-    width: 50vw
-    height: 80vh
+    width: 60%
+    height: 800px
     position: relative
     display: flex
     flex-direction: column
@@ -50,7 +50,8 @@
     margin-bottom: 15px
 
 .modal__description
-
+    display: flex
+    flex-direction: column
 
 .modal__btn-block
     display: flex
@@ -86,8 +87,6 @@
 .modal__btn-view:hover
     color: white
 
-
-
 .modal__btn-close
     background-image: url('../../assets/icons/others/close.svg')
     background-position: center
@@ -95,3 +94,6 @@
     width: 20px
     height: 20px
 
+@media screen and (max-width: 900px)
+    .modal__popup
+        height: 600px
