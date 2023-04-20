@@ -15,22 +15,6 @@
 
 Наглядно c функционалом проекта можно познакомиться в [видео]().
 
-## Команда проекта
-
-[Мила]() - Project-manager
-
-[Руслан Газиев](https://github.com/gazievri) - Team-lead, frontend-разработчик
-
-[Влад Белов](https://github.com/Valzet) - Frontend-разработчик
-
-[Дарья Каменская](https://github.com/DariaKamenskaya) - Frontend-разработчик
-
-[Сергей Меркулов](https://github.com/SergeiM63) - Frontend-разработчик
-
-[Анастасия Крестина](https://github.com/nastasiya-krestina) - Frontend-разработчик
-
-[Екатерина Гимадиева](https://github.com/KaterineG) - Frontend-разработчик
-
 ## Технологический стек
 
 При создании проекта использовался следующий стек технологий: HTML, SASS, React.js, ReactHooks, React-Hook-Form, функциональные компоненты React, REST-API.
