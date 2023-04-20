@@ -37,11 +37,15 @@ export const Experience = () => {
     setTimeout(() => setIsVisible(false), 3000);
   };
 
+  const handleClickRestart = () => {
+    setTechs(technologies)
+  }
+
   return (
     <Section options={options}>
       <div className="experience__tech">
         {techs.length === 0 ? (
-          <p>Ups... Start from scratch!</p>
+          <button className='experience__btn-restart' onClick={handleClickRestart}>Ups... Start from scratch!</button>
         ) : (
           techs.map((el) => (
             <>
