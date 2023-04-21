@@ -35,6 +35,25 @@
     grid-auto-rows: 0
     max-height: 316px
 
+.contact-me__lable
+    width: 100%
+    display: flex
+    flex-direction: column
+    grid-area: message
+    position: relative
+
+.contact-me__lable_type_name
+    grid-area: name
+
+.contact-me__lable_type_email
+    grid-area: email
+
+.contact-me__lable_type_subject
+    grid-area: subject
+
+.contact-me__lable_type_message
+    grid-area: message
+
 .contact-me__name
     grid-area: name
     height: 55px
@@ -48,6 +67,7 @@
     border: 1px solid #B44420
     padding: 0 10px
     @include web-t18
+    position: relative
 
 .contact-me__subject
     grid-area: subject
@@ -57,7 +77,6 @@
     @include web-t18
 
 .contact-me__message
-    grid-area: message
     border: 1px solid #B44420
     height: 166px
     resize: none
@@ -91,6 +110,46 @@
 .contact-me__btn:hover
     color: white
 
+.contact-me__btn:disabled
+    background-color: rgba(218, 223, 225, 0.5)
+
+.contact-me__btn:disabled:hover:before
+    height: 0%
+    color: black
+
+.contact-me__btn:disabled:hover
+    color: black
+    
+.contact-me__error-message
+    @include mob-t16
+    position: absolute
+    width: 100%
+    color: #B44420
+    font-size: 10px
+    opacity: 0.7
+    bottom: 0
+    left: 10px
+
+.contact-me__symbols-counter
+    position: absolute
+    bottom: 0
+    right: 10px
+    @include mob-t16
+    font-size: 10px
+    opacity: 0.7
+
+.contact-me__count
+    @include mob-t16
+    font-size: 10px
+    color: green
+    opacity: 0.7
+
+.contact-me__count_type_wrong
+    @include mob-t16
+    color: #B44420
+    font-size: 10px
+    opacity: 0.7
+
 @media screen and (max-width: 1240px)
     .contact-me__content
         padding-left: 60px
@@ -115,4 +174,3 @@
 
     .contact-me__btn
         align-self: center
-  

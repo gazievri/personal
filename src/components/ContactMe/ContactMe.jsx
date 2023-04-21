@@ -1,10 +1,7 @@
 import './ContactMe.sass';
 import { useForm } from 'react-hook-form';
-import { emailRegExp } from '../../utils/regExp';
-import {
-  deleteSpaces,
-  deleteSpacesAndFigures
-} from '../../utils/inputControl';
+import { emailRegExp, messageRegExp } from '../../utils/regExp';
+import { deleteSpaces, deleteSpacesAndFigures } from '../../utils/inputControl';
 import { WEB3FORM_KEY } from '../../utils/constants';
 import { useState } from 'react';
 
@@ -13,10 +10,13 @@ export const ContactMe = () => {
     register,
     handleSubmit,
     reset,
+    watch,
     formState: { errors, isValid },
   } = useForm({
     mode: 'all',
   });
+
+  const watchMessage = watch('message', 0);
 
   const onSubmit = async (data, e) => {
     await fetch('https://api.web3forms.com/submit', {
@@ -57,51 +57,126 @@ export const ContactMe = () => {
               value={WEB3FORM_KEY}
               {...register('access_key')}
             />
-            <input
-              className="contact-me__name"
-              type="text"
-              placeholder="NAME*"
-              maxLength="30"
-              {...register('name', {
-                required: true,
-                minLength: {
-                  value: 2,
-                  message: 'Не менее 2 символов',
-                },
-                onChange: (event) => {
-                  const { value } = event.target;
-                  event.target.value = deleteSpacesAndFigures(value);
-                },
-              })}
-            />
-            <input
-              className="contact-me__email"
-              type="email"
-              placeholder="EMAIL*"
-              maxLength="200"
-              {...register('email', {
-                required: true,
-                pattern: {
-                  value: emailRegExp,
-                  message: 'Введите корректный email',
-                },
-                onChange: (event) => {
-                  const { value } = event.target;
-                  event.target.value = deleteSpaces(value);
-                },
-              })}
-            />
-            <input
-              className="contact-me__subject"
-              type="text"
-              placeholder="SUBJECT"
-            />
-            <textarea
-              className="contact-me__message"
-              placeholder="MESSAGE*"
-            ></textarea>
+            <label className="contact-me__lable contact-me__lable_type_name">
+              <input
+                className="contact-me__name"
+                type="text"
+                placeholder="NAME*"
+                maxLength="50"
+                {...register('name', {
+                  required: 'Field is required',
+                  minLength: {
+                    value: 2,
+                    message: 'At least 10 characters',
+                  },
+                  onChange: (event) => {
+                    const { value } = event.target;
+                    event.target.value = deleteSpacesAndFigures(value);
+                  },
+                })}
+              />
+              {errors.name && (
+                <p role="alert" className="contact-me__error-message">
+                  {errors.name?.message}
+                </p>
+              )}
+            </label>
+
+            <label className="contact-me__lable contact-me__lable_type_email">
+              <input
+                className="contact-me__email"
+                type="email"
+                placeholder="EMAIL*"
+                maxLength="200"
+                {...register('email', {
+                  required: 'Field is required',
+                  pattern: {
+                    value: emailRegExp,
+                    message: 'Enter a valid email',
+                  },
+                  onChange: (event) => {
+                    const { value } = event.target;
+                    event.target.value = deleteSpaces(value);
+                  },
+                })}
+              />
+              {errors.email && (
+                <p role="alert" className="contact-me__error-message">
+                  {errors.email?.message}
+                </p>
+              )}
+            </label>
+
+            <label className="contact-me__lable contact-me__lable_type_subject">
+              <input
+                className="contact-me__subject"
+                type="text"
+                placeholder="SUBJECT"
+                maxLength="200"
+                {...register('subject', {
+                  required: false,
+                  minLength: {
+                    value: 2,
+                    message: 'At least 2 characters',
+                    pattern: {
+                      value: messageRegExp,
+                      message: 'Only letters are allowed',
+                    },
+                  },
+                })}
+              />
+              {errors.subject && (
+                <p role="alert" className="contact-me__error-message">
+                  {errors.subject?.message}
+                </p>
+              )}
+            </label>
+
+            <label className="contact-me__lable contact-me__lable_type_message">
+              <textarea
+                className="contact-me__message"
+                placeholder="MESSAGE*"
+                maxLength="300"
+                {...register('message', {
+                  required: 'Field is required',
+                  maxLength: {
+                    value: 300,
+                    message: 'No more than 300 characters',
+                  },
+                  minLength: {
+                    value: 10,
+                    message: 'At least 10 characters',
+                  },
+                  pattern: {
+                    value: messageRegExp,
+                    message: 'Only letters are allowed',
+                  },
+                })}
+              ></textarea>
+              {errors.message && (
+                <p role="alert" className="contact-me__error-message">
+                  {errors.message?.message}
+                </p>
+              )}
+              <p className="contact-me__symbols-counter">
+                <span
+                  className={
+                    watchMessage.length >= 10 && watchMessage.length <= 300
+                      ? 'contact-me__count'
+                      : 'contact-me__count_type_wrong'
+                  }
+                >
+                  {!watchMessage.length ? 0 : watchMessage.length}
+                </span>
+                /300
+              </p>
+            </label>
           </div>
-          <button className="contact-me__btn" type="submit">
+          <button
+            className="contact-me__btn"
+            type="submit"
+            disabled={!isValid ? true : false}
+          >
             Send it
           </button>
         </form>
