@@ -3,7 +3,6 @@ import { useForm } from 'react-hook-form';
 import { emailRegExp, messageRegExp } from '../../utils/regExp';
 import { deleteSpaces, deleteSpacesAndFigures } from '../../utils/inputControl';
 import { WEB3FORM_KEY } from '../../utils/constants';
-import { useState } from 'react';
 
 export const ContactMe = () => {
   const {
