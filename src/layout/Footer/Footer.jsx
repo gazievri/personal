@@ -42,7 +42,7 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <p className="footer__copyright">© Copyright 2023 − Ruslan Gaziev</p>
+        <p className="footer__copyright">© Copyright {new Date().getFullYear()} − Ruslan Gaziev</p>
       </div>
     </footer>
   );
