@@ -38,14 +38,19 @@ export const Experience = () => {
   };
 
   const handleClickRestart = () => {
-    setTechs(technologies)
-  }
+    setTechs(technologies);
+  };
 
   return (
     <Section options={options}>
       <div className="experience__tech">
         {techs.length === 0 ? (
-          <button className='experience__btn-restart' onClick={handleClickRestart}>Ups... Start from scratch!</button>
+          <button
+            className="experience__btn-restart"
+            onClick={handleClickRestart}
+          >
+            Ups... Start from scratch!
+          </button>
         ) : (
           techs.map((el) => (
             <>
