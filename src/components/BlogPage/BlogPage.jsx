@@ -23,7 +23,7 @@ export const BlogPage = () => {
       </div>
       <div className="blog-page__content">
         {devidePosts(POSTS).map((group) => (
-          <ul className="blog-page__posts">
+          <ul className="blog-page__posts" key={uuidv4()}>
             {group.map((post) => (
               <li key={uuidv4()}>
                 <Post post={post} />

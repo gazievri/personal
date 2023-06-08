@@ -22,9 +22,11 @@ export const Modal = ({ modalIsOpened, data, setModalIsOpened }) => {
           <h2 className="modal__title">{title}</h2>
           <p className="modal__description">{description}</p>
           <div className="modal__btn-block">
-            <a href={url} className="modal__btn-view" target="_blank">
+            {
+              url ?             <a href={url} className="modal__btn-view" target="_blank">
               View site
-            </a>
+            </a> : ""
+            }
             <button className="modal__btn-close" onClick={handleBtnClose} />
           </div>
         </div>

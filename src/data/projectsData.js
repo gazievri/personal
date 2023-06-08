@@ -71,7 +71,7 @@ export const PROJECTS = [
   {
     title: 'Special Type',
     images: [osobtip_1],
-    url: 'https://osobtip.ru/',
+    url: '',
     description:
       'The Special TYPE project is a multi-page website created for the First Inclusive Theater Project in Novosibirsk, called "Special TYPE." The project was developed and implemented by a team affiliated with the Developer\'s Guild (IT School). The website was built using the following technology stack: HTML, SASS, React.js, React Hooks, React-Hook-Form, functional React components, and REST API.',
   },

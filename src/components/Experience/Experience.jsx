@@ -53,7 +53,7 @@ export const Experience = () => {
           </button>
         ) : (
           techs.map((el) => (
-            <>
+            <div key={uuidv4()}>
               <img
                 className="experience__icon"
                 src={el.icon}
@@ -63,7 +63,7 @@ export const Experience = () => {
                 onClick={() => handleClick(el.id)}
               />
               {isVisible && <Confetti coordinates={coordinatesFire} />}
-            </>
+            </div>
           ))
         )}
       </div>
