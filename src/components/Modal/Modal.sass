@@ -31,6 +31,7 @@
     height: 60%
     background: grey
     overflow: hidden
+    border-bottom: 1px solid black
 
 .modal__img
     object-fit: contain
@@ -98,3 +99,13 @@
 @media screen and (max-width: 900px)
     .modal__popup
         height: 600px
+
+@media screen and (max-width: 600px)
+    .modal__popup
+        width: 90%
+
+    .modal__img-container
+        height: 40%
+
+    .modal__title
+        font-size: 25px

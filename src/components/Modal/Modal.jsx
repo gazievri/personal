@@ -1,10 +1,14 @@
 import './Modal.sass';
+import { useSelector, useDispatch } from 'react-redux';
+import { closeModal } from '../../store/modalSlice';
 
-export const Modal = ({ modalIsOpened, data, setModalIsOpened }) => {
+export const Modal = ({ data }) => {
+  const dispatch = useDispatch();
   const { title, images, url, description } = data;
+  const modalIsOpened = useSelector(state => state.modal.modalIsOpened);
 
   const handleBtnClose = () => {
-    setModalIsOpened(false);
+    dispatch(closeModal());
   };
 
   // Закрытие модального окна при клике по оверлею

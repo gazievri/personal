@@ -1,10 +1,11 @@
 import './Projects.sass';
 import { v4 as uuidv4 } from 'uuid';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Section } from '../Section/Section';
 import { Project } from '../Project/Project';
 import { PROJECTS } from '../../data/projectsData';
 import { Modal } from '../Modal/Modal';
+import { useSelector } from 'react-redux';
 
 const FILTERS_TITLE = [
   {
@@ -34,14 +35,22 @@ const OPTIONS = {
   title: 'PROJECTS',
 };
 
-export const Projects = ({ setModalIsOpened, modalIsOpened }) => {
-  const [activeFilter, setActiveFilter] = useState(1);
+export const Projects = () => {
+  // const [activeFilter, setActiveFilter] = useState(1);
 
-  const [data, setData] = useState({});
+  const project = useSelector((state) => state.project.data);
 
-  const handleFilterClick = (id) => {
-    setActiveFilter(id);
-  };
+  // const handleFilterClick = (id) => {
+  //   setActiveFilter(id);
+  // };
+
+  const visibleProjects = useMemo(() => {
+    return PROJECTS.map((el) => (
+      <li className="project__list-item" key={uuidv4()}>
+        <Project project={el} />
+      </li>
+    ));
+  }, [PROJECTS]);
 
   return (
     <Section options={OPTIONS}>
@@ -65,24 +74,8 @@ export const Projects = ({ setModalIsOpened, modalIsOpened }) => {
         </ul>
       </div> */}
 
-      <ul className="projects__list">
-        {PROJECTS.map((el) => (
-          <li className="project__list-item" key={uuidv4()}>
-            <Project
-              project={el}
-              setModalIsOpened={setModalIsOpened}
-              setData={setData}
-            />
-          </li>
-        ))}
-      </ul>
-      {data.title && (
-        <Modal
-          modalIsOpened={modalIsOpened}
-          setModalIsOpened={setModalIsOpened}
-          data={data}
-        />
-      )}
+      <ul className="projects__list">{visibleProjects}</ul>
+      {project?.title && <Modal data={project} />}
     </Section>
   );
 };

@@ -1,11 +1,15 @@
 import './Project.sass';
+import { useDispatch } from 'react-redux';
+import { openModal } from '../../store/modalSlice';
+import { setActiveProject } from '../../store/activeProject';
 
-export const Project = ({ project, setModalIsOpened, setData }) => {
+export const Project = ({ project }) => {
   const { images, title } = project;
+  const dispatch = useDispatch();
 
   const handleBtnClick = () => {
-    setData(project);
-    setModalIsOpened(true);
+    dispatch(setActiveProject(project));
+    dispatch(openModal());
   };
 
   return (
