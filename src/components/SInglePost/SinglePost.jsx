@@ -11,7 +11,6 @@ export const SinglePost = () => {
   )[0];
   const dateObj = new Date(postData.date);
   const dateTimeFormat = new Intl.DateTimeFormat('en-US', options);
-  console.log(postData);
 
   return (
     <section className="single-post">

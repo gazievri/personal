@@ -9,6 +9,7 @@ export const Modal = ({ data }) => {
 
   const handleBtnClose = () => {
     dispatch(closeModal());
+    document.body.style.overflow = "";
   };
 
   // Закрытие модального окна при клике по оверлею

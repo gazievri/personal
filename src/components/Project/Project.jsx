@@ -10,6 +10,7 @@ export const Project = ({ project }) => {
   const handleBtnClick = () => {
     dispatch(setActiveProject(project));
     dispatch(openModal());
+    document.body.style.overflow = "hidden";
   };
 
   return (
