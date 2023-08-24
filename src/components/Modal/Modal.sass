@@ -17,6 +17,7 @@
 
 .modal_status_opened
     display: flex
+    animation: modal 0.3s
 
 .modal__popup
     width: 60%
@@ -109,3 +110,9 @@
 
     .modal__title
         font-size: 25px
+
+@keyframes modal
+    0%
+        opacity: 0       
+    100%
+        opacity: 100
